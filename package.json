@@ -1,0 +1,9 @@
+{
+  "name": "berlin-clock",
+  "version": "1.0.0",
+  "description": "projet",
+  "type": "module",
+  "scripts": {
+    "test": "jasmine"
+  }
+}
