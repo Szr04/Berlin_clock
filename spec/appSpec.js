@@ -1,1 +1,1 @@
-import { Main } from '../spec/app.js';
+import { BerlinClock } from '../spec/app.js';
