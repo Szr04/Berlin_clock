@@ -21,4 +21,16 @@ describe("berlinClockSingleMinute function should return the single minute", fun
         expect(result).toBe("YXXX");   
 
     })
+
+    it ("it should return YYXX when given 2 minutes", function(){
+        const date = new Date();
+        date.setMinutes(2);
+
+        const result = clock.berlinClockSingleMinute(date.getMinutes());
+
+        expect(result).toBe("YYXX");   
+
+    })
+
+    
 });
