@@ -92,5 +92,15 @@ describe("berlinClockSingleMinute function should return the single minute", fun
 
     });
 
+    it ("it should return YYYY when given 9 minutes", function(){
+        const date = new Date();
+        date.setMinutes(9);
+
+        const result = clock.berlinClockSingleMinute(date.getMinutes());
+
+        expect(result).toBe("YYYY");   
+
+    });
+
     
 });
