@@ -20,7 +20,7 @@ describe("berlinClockSingleMinute function should return the single minute", fun
 
         expect(result).toBe("YXXX");   
 
-    })
+    });
 
     it ("it should return YYXX when given 2 minutes", function(){
         const date = new Date();
@@ -30,7 +30,7 @@ describe("berlinClockSingleMinute function should return the single minute", fun
 
         expect(result).toBe("YYXX");   
 
-    })
+    });
 
     it ("it should return YYYX when given 3 minutes", function(){
         const date = new Date();
@@ -40,7 +40,7 @@ describe("berlinClockSingleMinute function should return the single minute", fun
 
         expect(result).toBe("YYYX");   
 
-    })
+    });
 
     it ("it should return YYYY when given 4 minutes", function(){
         const date = new Date();
@@ -50,7 +50,7 @@ describe("berlinClockSingleMinute function should return the single minute", fun
 
         expect(result).toBe("YYYY");   
 
-    })
+    });
 
     it ("it should return XXXX when given 5 minutes", function(){
         const date = new Date();
@@ -60,7 +60,7 @@ describe("berlinClockSingleMinute function should return the single minute", fun
 
         expect(result).toBe("XXXX");   
 
-    })
+    });
 
     it ("it should return YXXX when given 6 minutes", function(){
         const date = new Date();
@@ -70,7 +70,17 @@ describe("berlinClockSingleMinute function should return the single minute", fun
 
         expect(result).toBe("YXXX");   
 
-    })
+    });
+
+    it ("it should return YYXX when given 7 minutes", function(){
+        const date = new Date();
+        date.setMinutes(7);
+
+        const result = clock.berlinClockSingleMinute(date.getMinutes());
+
+        expect(result).toBe("YYXX");   
+
+    });
 
     
 });
