@@ -11,11 +11,18 @@ export class BerlinClock {
 
     berlinClock5Minutes(minutes){
         if (this.isUnder5minutes(minutes)) return "XXXXXXXXXXX";
-        if (minutes === 5) return "YXXXXXXXXXX"
+        if (this.isBetween5and9(minutes)) return "YXXXXXXXXXX";
+        if (this.isBetween10and14(minutes)) return "YYXXXXXXXXX";
     }
 
     isUnder5minutes(minutes){
         return minutes < 5 
+    }
+    isBetween5and9(minutes){
+        return minutes >= 5 && minutes <= 9;
+    }
+    isBetween10and14(minutes){
+        return minutes >=10 && minutes <= 14
     }
 
     hasAnOffsetOf0 (minutes){
