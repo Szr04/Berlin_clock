@@ -112,5 +112,39 @@ describe("berlinClockSingleMinute function should return the single minute", fun
 
     });
 
-    
+    it ("it should return YXXX when given 11 minutes", function(){
+        const date = new Date();
+        date.setMinutes(11);
+
+        const result = clock.berlinClockSingleMinute(date.getMinutes());
+
+        expect(result).toBe("YXXX");   
+
+    });
+
 });
+
+describe("berlinClock5Minutes function should return the 5 minutes", function() {
+    const clock = new BerlinClock();
+
+    it("it should return XXXXXXXXXXX when given 0 minute", function() {
+        const date = new Date();
+        date.setMinutes(0);
+
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+
+        expect(result).toBe("XXXXXXXXXXX");   
+    });
+
+    
+    it("it should return XXXXXXXXXXX when given 1 minute", function() {
+        const date = new Date();
+        date.setMinutes(1);
+
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+
+        expect(result).toBe("XXXXXXXXXXX");   
+    });
+
+
+})
