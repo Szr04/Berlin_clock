@@ -9,6 +9,10 @@ export class BerlinClock {
         return "XXXX"; 
     }
 
+    berlinClock5Minutes(minutes){
+        if (minutes === 0) return "XXXXXXXXXXX"
+    }
+
     hasAnOffsetOf0 (minutes){
         return minutes % 5 ===0;
     }
@@ -28,10 +32,5 @@ export class BerlinClock {
     hasAnOffsetOf4(minutes) {
         return minutes % 5 === 4;
     }
-
-    
-
-    
-
 
 }
