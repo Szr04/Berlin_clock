@@ -10,7 +10,7 @@ export class BerlinClock {
     }
 
     berlinClock5Minutes(minutes){
-        if (minutes === 0) return "XXXXXXXXXXX"
+        if (minutes === 0 || minutes === 1) return "XXXXXXXXXXX"
     }
 
     hasAnOffsetOf0 (minutes){
