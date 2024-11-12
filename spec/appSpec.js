@@ -52,5 +52,15 @@ describe("berlinClockSingleMinute function should return the single minute", fun
 
     })
 
+    it ("it should return XXXX when given 5 minutes", function(){
+        const date = new Date();
+        date.setMinutes(5);
+
+        const result = clock.berlinClockSingleMinute(date.getMinutes());
+
+        expect(result).toBe("XXXX");   
+
+    })
+
     
 });
