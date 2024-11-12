@@ -4,6 +4,7 @@ export class BerlinClock {
         if (minutes === 1) return "YXXX";
         if (minutes === 2) return "YYXX";
         if (minutes === 3) return "YYYX";
+        if (minutes === 4) return "YYYY";
         
         return "XXXX"; 
     }
