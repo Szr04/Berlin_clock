@@ -146,7 +146,7 @@ describe("berlinClock5Minutes function should return the 5 minutes", function() 
         expect(result).toBe("XXXXXXXXXXX");   
     });
 
-    it("it should return XXXXXXXXXXX when given 2 minute", function() {
+    it("it should return XXXXXXXXXXX when given 2 minutes", function() {
         const date = new Date();
         date.setMinutes(2);
 
@@ -155,13 +155,22 @@ describe("berlinClock5Minutes function should return the 5 minutes", function() 
         expect(result).toBe("XXXXXXXXXXX");   
     });
 
-    it("it should return XXXXXXXXXXX when given 3 minute", function() {
+    it("it should return XXXXXXXXXXX when given 3 minutes", function() {
         const date = new Date();
         date.setMinutes(3);
 
         const result = clock.berlinClock5Minutes(date.getMinutes());
 
         expect(result).toBe("XXXXXXXXXXX");   
+    });
+
+    it("it should return YXXXXXXXXXX when given 5 minutes", function() {
+        const date = new Date();
+        date.setMinutes(5);
+
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+
+        expect(result).toBe("YXXXXXXXXXX");   
     });
     
 

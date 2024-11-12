@@ -10,7 +10,8 @@ export class BerlinClock {
     }
 
     berlinClock5Minutes(minutes){
-        if (this.isUnder5minutes(minutes)) return "XXXXXXXXXXX"
+        if (this.isUnder5minutes(minutes)) return "XXXXXXXXXXX";
+        if (minutes === 5) return "YXXXXXXXXXX"
     }
 
     isUnder5minutes(minutes){
