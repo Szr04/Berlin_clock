@@ -32,5 +32,15 @@ describe("berlinClockSingleMinute function should return the single minute", fun
 
     })
 
+    it ("it should return YYYX when given 3 minutes", function(){
+        const date = new Date();
+        date.setMinutes(3);
+
+        const result = clock.berlinClockSingleMinute(date.getMinutes());
+
+        expect(result).toBe("YYYX");   
+
+    })
+
     
 });
