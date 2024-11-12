@@ -1,3 +1,5 @@
+
+//Convert Time Stamp
 export class BerlinClock{
     convertTimeStamp() {
         const now = new Date();
