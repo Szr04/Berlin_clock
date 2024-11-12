@@ -82,5 +82,15 @@ describe("berlinClockSingleMinute function should return the single minute", fun
 
     });
 
+    it ("it should return YYYX when given 8 minutes", function(){
+        const date = new Date();
+        date.setMinutes(8);
+
+        const result = clock.berlinClockSingleMinute(date.getMinutes());
+
+        expect(result).toBe("YYYX");   
+
+    });
+
     
 });
