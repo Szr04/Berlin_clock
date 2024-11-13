@@ -407,18 +407,25 @@ describe("berlinClock5Minutes function should return the 5 minutes", function() 
         
         expect(result).toBe("XXXXXXXXXXX");   
       });
-
-
-
-
-
-
-
-
-    
-    
-    
-
-
-
 })
+
+describe("BerlinClockSingleHour function should return the single hour line", function () {
+    const clock = new BerlinClock();
+    it("should return XXXX when given 0 hours", function(){
+        const date = new Date();
+        date.setHours(0);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("XXXX");
+
+    })
+})
+
+    
+    
+    
+
+
+
+

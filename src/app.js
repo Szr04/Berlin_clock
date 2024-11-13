@@ -32,6 +32,11 @@ export class BerlinClock {
         if(this.isBetween55and59(minutes)) return "YYRYYRYYRYY";
     }
 
+    // Single hour line
+
+    berlinClockSingleHour(hour){
+        if (hour === 0) return "XXXX";
+    }
 
     isUnder5minutesOrIsEqualTo60(minutes){
         return minutes < 5 || minutes === 60;
