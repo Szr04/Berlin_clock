@@ -37,6 +37,8 @@ export class BerlinClock {
     berlinClockSingleHour(hour){
         if (hour === 0) return "XXXX";
         if (hour === 1) return "RXXX";
+        if (hour === 2) return "RRXX";
+
     }
 
     

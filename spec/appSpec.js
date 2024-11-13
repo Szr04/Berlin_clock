@@ -429,6 +429,16 @@ describe("BerlinClockSingleHour function should return the single hour line", fu
 
         expect(result).toBe("RXXX");
     })
+
+    it("should return RRXX when given 2 hour", function(){
+        const date = new Date();
+        date.setHours(2);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("RRXX");
+    })
+    
 })
 
     
