@@ -59,6 +59,8 @@ export class BerlinClock {
 
     berlinClockSeconds(second){
         if(second === 0) return "R";
+        if(second === 1) return "X";
+        
     }
 
     
