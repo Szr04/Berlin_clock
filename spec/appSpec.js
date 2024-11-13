@@ -199,6 +199,223 @@ describe("berlinClock5Minutes function should return the 5 minutes", function() 
         
         expect(result).toBe("YYXXXXXXXXX");   
       });
+
+      it("should return YYXXXXXXXXX when given 11 minutes", function() {
+        const date = new Date();
+        date.setMinutes(11);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYXXXXXXXXX");   
+      });
+
+      it("should return YYXXXXXXXXX when given 14 minutes", function() {
+        const date = new Date();
+        date.setMinutes(14);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYXXXXXXXXX");   
+      });
+
+      it("should return YYRXXXXXXXX when given 15 minutes", function() {
+        const date = new Date();
+        date.setMinutes(15);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRXXXXXXXX");   
+      });
+
+      it("should return YYRXXXXXXXX when given 16 minutes", function() {
+        const date = new Date();
+        date.setMinutes(16);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRXXXXXXXX");   
+      });
+
+      it("should return YYRXXXXXXXX when given 19 minutes", function() {
+        const date = new Date();
+        date.setMinutes(19);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRXXXXXXXX");   
+      });
+
+      it("should return YYRYXXXXXXX when given 20 minutes", function() {
+        const date = new Date();
+        date.setMinutes(20);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYXXXXXXX");   
+      });
+
+      it("should return YYRYXXXXXXX when given 24 minutes", function() {
+        const date = new Date();
+        date.setMinutes(24);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYXXXXXXX");   
+      });
+
+      it("should return YYRYYXXXXXX when given 25 minutes", function() {
+        const date = new Date();
+        date.setMinutes(25);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYXXXXXX");   
+      });
+
+      it("should return YYRYYXXXXXX when given 29 minutes", function() {
+        const date = new Date();
+        date.setMinutes(29);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYXXXXXX");   
+      });
+
+      it("should return YYRYYRXXXXX when given 30 minutes", function() {
+        const date = new Date();
+        date.setMinutes(30);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRXXXXX");   
+      });
+
+      
+      it("should return YYRYYRXXXXX when given 34 minutes", function() {
+        const date = new Date();
+        date.setMinutes(34);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRXXXXX");   
+      });
+
+      it("should return YYRYYRYXXXX when given 35 minutes", function() {
+        const date = new Date();
+        date.setMinutes(35);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRYXXXX");   
+      });
+
+      it("should return YYRYYRYXXXX when given 39 minutes", function() {
+        const date = new Date();
+        date.setMinutes(39);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRYXXXX");   
+      });
+
+      it("should return YYRYYRYYXXX when given 40 minutes", function() {
+        const date = new Date();
+        date.setMinutes(40);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRYYXXX");   
+      });
+
+      it("should return YYRYYRYYXXX when given 41 minutes", function() {
+        const date = new Date();
+        date.setMinutes(41);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRYYXXX");   
+      });
+
+      it("should return YYRYYRYYXXX when given 44 minutes", function() {
+        const date = new Date();
+        date.setMinutes(44);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRYYXXX");   
+      });
+
+      it("should return YYRYYRYYRXX when given 45 minutes", function() {
+        const date = new Date();
+        date.setMinutes(45);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRYYRXX");   
+      });
+
+      it("should return YYRYYRYYRXX when given 49 minutes", function() {
+        const date = new Date();
+        date.setMinutes(49);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRYYRXX");   
+      });
+
+      it("should return YYRYYRYYRYX when given 50 minutes", function() {
+        const date = new Date();
+        date.setMinutes(50);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRYYRYX");   
+      });
+
+      it("should return YYRYYRYYRYX when given 54 minutes", function() {
+        const date = new Date();
+        date.setMinutes(54);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRYYRYX");   
+      });
+
+      it("should return YYRYYRYYRYY when given 55 minutes", function() {
+        const date = new Date();
+        date.setMinutes(55);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRYYRYY");   
+      });
+
+      it("should return YYRYYRYYRYY when given 59 minutes", function() {
+        const date = new Date();
+        date.setMinutes(59);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRYYRYYRYY");   
+      });
+
+      it("should return XXXXXXXXXXX when given 60 minutes", function() {
+        const date = new Date();
+        date.setMinutes(60);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("XXXXXXXXXXX");   
+      });
+
+
+
+
+
+
+
+
+    
     
     
 
