@@ -510,6 +510,15 @@ describe("BerlinClockSingleHour function should return the single hour line", fu
 
         expect(result).toBe("XXXX");
     })
+
+    it("should return RXXX when given 11 hours", function(){
+        const date = new Date();
+        date.setHours(11);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("RXXX");
+    })
     
     
 })
