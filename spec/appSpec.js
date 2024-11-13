@@ -702,11 +702,20 @@ describe("BerlinClockSeconds function should return the seconds line", function 
 
     it("should return R when given 6 seconds", function(){
         const date = new Date();
-        date.setSeconds(2);
+        date.setSeconds(6);
 
         const result = clock.berlinClockSeconds(date.getSeconds());
 
         expect(result).toBe("R");
+    });
+
+    it("should return X when given 7 seconds", function(){
+        const date = new Date();
+        date.setSeconds(7);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("X");
     });
 })    
     
