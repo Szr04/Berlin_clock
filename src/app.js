@@ -15,7 +15,8 @@ export class BerlinClock {
         if (this.isBetween10and14(minutes)) return "YYXXXXXXXXX";
         if (this.isBetween15and19(minutes)) return "YYRXXXXXXXX";
         if (this.isBetween20and24(minutes)) return "YYRYXXXXXXX";
-        if(this.isBetween25and29(minutes)) return "YYRYYXXXXXX"
+        if(this.isBetween25and29(minutes)) return "YYRYYXXXXXX";
+        if(this.isBetween30and34(minutes)) return "YYRYYRXXXXX"
     }
 
     isUnder5minutes(minutes){
@@ -37,7 +38,11 @@ export class BerlinClock {
     }
 
     isBetween25and29(minutes){
-        return minutes >=25 && minutes <=29;
+        return minutes >=25 && minutes <= 29;
+    }
+
+    isBetween30and34(minutes){
+        return minutes >=30 && minutes <= 34;
     }
 
     hasAnOffsetOf0 (minutes){
