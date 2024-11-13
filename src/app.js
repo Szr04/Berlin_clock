@@ -38,7 +38,7 @@ export class BerlinClock {
 
         if (hour === 0 || hour === 5) return "XXXX";
         if (this.hasAnOffsetOf1hour(hour)) return "RXXX";
-        if (hour === 2) return "RRXX";
+        if (this.hasAnOffsetOf2hour(hour)) return "RRXX";
         if (hour === 3) return "RRRX";
         if (hour === 4) return "RRRR";
     
@@ -117,6 +117,10 @@ export class BerlinClock {
 
     hasAnOffsetOf1hour(hour) {
         return hour % 5 === 1;
+    }
+
+    hasAnOffsetOf2hour(hour) {
+        return hour % 5 === 2;
     }
 
 }
