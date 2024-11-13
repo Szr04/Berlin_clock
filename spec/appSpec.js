@@ -765,4 +765,17 @@ describe("BerlinClock function should return the Berlin Clock", function () {
 
         expect(result).toBe("R-RRXX-XXXX-XXXXXXXXXXX-XXXX");
     });
+
+    it("should return X-RRXX-RXXX-YYRYYRXXXXX-YXXX when given 11 : 31 : 23", function(){
+        const date = new Date();
+        date.setHours(11);
+        date.setMinutes(31);
+        date.setSeconds(23);
+
+        const result = clock.berlinClockFinal(date.getHours(),date.getMinutes(),date.getSeconds());
+
+        expect(result).toBe("X-RRXX-RXXX-YYRYYRXXXXX-YXXX");
+    });
+
+    
 })    
