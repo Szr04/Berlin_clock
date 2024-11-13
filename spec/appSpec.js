@@ -750,3 +750,19 @@ describe("BerlinClockSeconds function should return the seconds line", function 
 
 
 
+
+
+describe("BerlinClock function should return the Berlin Clock", function () {
+    const clock = new BerlinClock();
+
+    it("should return R-RRXX-XXXX-XXXXXXXXXXX-XXXX when given 10 : 00 : 56", function(){
+        const date = new Date();
+        date.setHours(10);
+        date.setMinutes(0);
+        date.setSeconds(56);
+
+        const result = clock.berlinClockFinal(date.getHours(),date.getMinutes(),date.getSeconds());
+
+        expect(result).toBe("R-RRXX-XXXX-XXXXXXXXXXX-XXXX");
+    });
+})    

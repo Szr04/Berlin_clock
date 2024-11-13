@@ -63,6 +63,11 @@ export class BerlinClock {
         
     }
 
+
+    berlinClockFinal(hour,minutes,second){
+        return this.berlinClockSeconds(second) + "-" + this.berlinClock5Hours(hour) + "-" + this.berlinClockSingleHour(hour) + "-" + this.berlinClock5Minutes(minutes) + "-" + this.berlinClockSingleMinute(minutes);
+    }
+
     
 
     isUnder5minutesOrIsEqualTo60(minutes){
