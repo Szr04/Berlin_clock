@@ -777,5 +777,16 @@ describe("BerlinClock function should return the Berlin Clock", function () {
         expect(result).toBe("X-RRXX-RXXX-YYRYYRXXXXX-YXXX");
     });
 
+    it("should return R-XXXX-XXXX-XXXXXXXXXXX-XXXX when given 00 : 00 : 00 (midnight)", function(){
+        const date = new Date();
+        date.setHours(24);
+        date.setMinutes(0);
+        date.setSeconds(0);
+
+        const result = clock.berlinClockFinal(date.getHours(),date.getMinutes(),date.getSeconds());
+
+        expect(result).toBe("R-XXXX-XXXX-XXXXXXXXXXX-XXXX");
+    });
+
     
 })    
