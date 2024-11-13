@@ -45,6 +45,11 @@ export class BerlinClock {
 
     }
 
+    berlinClock5Hours(hour){
+
+        if (hour === 0) return "XXXX";
+    }
+
     
 
     isUnder5minutesOrIsEqualTo60(minutes){
