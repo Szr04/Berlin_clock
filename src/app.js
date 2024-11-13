@@ -48,7 +48,7 @@ export class BerlinClock {
     berlinClock5Hours(hour){
 
         if (this.isUnder5hours(hour)) return "XXXX";
-        if (hour === 5) return "RXXX";
+        if (this.isBetween5and9hour) return "RXXX";
         
         
     }
@@ -150,6 +150,10 @@ export class BerlinClock {
 
     isUnder5hours(hour){
         return hour < 5;
+    }
+
+    isBetween5and9hour(hour){
+        return hour >= 5 && hour <= 9;
     }
 
 
