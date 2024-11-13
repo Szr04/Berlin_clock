@@ -236,6 +236,15 @@ describe("berlinClock5Minutes function should return the 5 minutes", function() 
         expect(result).toBe("YYRXXXXXXXX");   
       });
 
+      it("should return YYRXXXXXXXX when given 19 minutes", function() {
+        const date = new Date();
+        date.setMinutes(19);
+      
+        const result = clock.berlinClock5Minutes(date.getMinutes());
+        
+        expect(result).toBe("YYRXXXXXXXX");   
+      });
+
 
 
     
