@@ -1,4 +1,10 @@
+//X represents light off
+//Y means Yellow light
+//R means Red light
 export class BerlinClock {
+
+    //Single minute line 
+    
     berlinClockSingleMinute(minutes) {
         if (this.hasAnOffsetOf0(minutes)) return "XXXX";
         if (this.hasAnOffsetOf1(minutes)) return "YXXX";
@@ -8,6 +14,8 @@ export class BerlinClock {
         
         return "XXXX"; 
     }
+
+    // 5-minute blocks line
 
     berlinClock5Minutes(minutes){
         if (this.isUnder5minutesOrIsEqualTo60(minutes)) return "XXXXXXXXXXX";
@@ -23,6 +31,7 @@ export class BerlinClock {
         if(this.isBetween50and54(minutes)) return "YYRYYRYYRYX";
         if(this.isBetween55and59(minutes)) return "YYRYYRYYRYY";
     }
+
 
     isUnder5minutesOrIsEqualTo60(minutes){
         return minutes < 5 || minutes === 60;
@@ -69,6 +78,7 @@ export class BerlinClock {
     isBetween55and59(minutes){
         return minutes >=55 && minutes <=59;
     }
+
 
 
     hasAnOffsetOf0 (minutes){
