@@ -47,7 +47,8 @@ export class BerlinClock {
 
     berlinClock5Hours(hour){
 
-        if (hour === 0 || hour === 1 || hour === 2) return "XXXX";
+        if (this.isUnder5hours(hour)) return "XXXX";
+        
         
     }
 
@@ -144,5 +145,11 @@ export class BerlinClock {
     hasAnOffsetOf4hour(hour) {
         return hour % 5 === 4;
     }
+
+
+    isUnder5hours(hour){
+        return hour < 5;
+    }
+
 
 }

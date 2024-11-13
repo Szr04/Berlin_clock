@@ -559,6 +559,18 @@ describe("berlinClock5Hours function should return the 5 hours", function() {
 
         expect(result).toBe("XXXX");
     })
+
+    it("should return XXXX when given 3 hours", function(){
+        const date = new Date();
+        date.setHours(3);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("XXXX");
+    })
+
+    
+    
 })
     
     
