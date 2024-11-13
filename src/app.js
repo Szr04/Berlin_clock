@@ -56,6 +56,18 @@ export class BerlinClock {
         if (this.isBetween20and23hour(hour)) return "RRRR";
     }
 
+
+    berlinClockSeconds(second){
+        if(this.isSecondsPair(second)) return "R";
+        if(!this.isSecondsPair(second)) return "X";
+        
+    }
+
+
+    berlinClockFinal(hour,minutes,second){
+        return this.berlinClockSeconds(second) + "-" + this.berlinClock5Hours(hour) + "-" + this.berlinClockSingleHour(hour) + "-" + this.berlinClock5Minutes(minutes) + "-" + this.berlinClockSingleMinute(minutes);
+    }
+
     
 
     isUnder5minutesOrIsEqualTo60(minutes){
@@ -170,5 +182,11 @@ export class BerlinClock {
         return hour >= 20 && hour <= 23;
     }
 
+
+
+    //secondsPairs
+    isSecondsPair(second){
+        return second % 2 === 0;
+    }
 
 }

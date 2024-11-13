@@ -640,14 +640,153 @@ describe("berlinClock5Hours function should return the 5 hours", function() {
 
         expect(result).toBe("RRRR");
     });
-
-    
-    
 })
     
+
+describe("BerlinClockSeconds function should return the seconds line", function () {
+    const clock = new BerlinClock();
+
+    it("should return R when given 0 second", function(){
+        const date = new Date();
+        date.setSeconds(0);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("R");
+    });
+
+    it("should return X when given 1 second", function(){
+        const date = new Date();
+        date.setSeconds(1);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("X");
+    });
+
+    it("should return R when given 2 seconds", function(){
+        const date = new Date();
+        date.setSeconds(2);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("R");
+    });
+
+    it("should return X when given 3 seconds", function(){
+        const date = new Date();
+        date.setSeconds(3);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("X");
+    });
+
+    it("should return R when given 4 seconds", function(){
+        const date = new Date();
+        date.setSeconds(4);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("R");
+    });
+
+    it("should return X when given 5 seconds", function(){
+        const date = new Date();
+        date.setSeconds(5);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("X");
+    });
+
+    it("should return R when given 6 seconds", function(){
+        const date = new Date();
+        date.setSeconds(6);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("R");
+    });
+
+    it("should return X when given 7 seconds", function(){
+        const date = new Date();
+        date.setSeconds(7);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("X");
+    });
+
+    it("should return R when given 8 seconds", function(){
+        const date = new Date();
+        date.setSeconds(8);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("R");
+    });
+
+    it("should return X when given 9 seconds", function(){
+        const date = new Date();
+        date.setSeconds(9);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("X");
+    });
+
+    it("should return R when given 10 seconds", function(){
+        const date = new Date();
+        date.setSeconds(10);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("R");
+    });
+})    
     
+
+
+
+
+
+
+describe("BerlinClock function should return the Berlin Clock", function () {
+    const clock = new BerlinClock();
+
+    it("should return R-RRXX-XXXX-XXXXXXXXXXX-XXXX when given 10 : 00 : 56", function(){
+        const date = new Date();
+        date.setHours(10);
+        date.setMinutes(0);
+        date.setSeconds(56);
+
+        const result = clock.berlinClockFinal(date.getHours(),date.getMinutes(),date.getSeconds());
+
+        expect(result).toBe("R-RRXX-XXXX-XXXXXXXXXXX-XXXX");
+    });
+
+    it("should return X-RRXX-RXXX-YYRYYRXXXXX-YXXX when given 11 : 31 : 23", function(){
+        const date = new Date();
+        date.setHours(11);
+        date.setMinutes(31);
+        date.setSeconds(23);
+
+        const result = clock.berlinClockFinal(date.getHours(),date.getMinutes(),date.getSeconds());
+
+        expect(result).toBe("X-RRXX-RXXX-YYRYYRXXXXX-YXXX");
+    });
+
+    it("should return R-XXXX-XXXX-XXXXXXXXXXX-XXXX when given 00 : 00 : 00 (midnight)", function(){
+        const date = new Date();
+        date.setHours(24);
+        date.setMinutes(0);
+        date.setSeconds(0);
+
+        const result = clock.berlinClockFinal(date.getHours(),date.getMinutes(),date.getSeconds());
+
+        expect(result).toBe("R-XXXX-XXXX-XXXXXXXXXXX-XXXX");
+    });
+
     
-
-
-
-
+})    
