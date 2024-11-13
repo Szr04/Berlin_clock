@@ -12,7 +12,7 @@ export class BerlinClock {
         if (this.hasAnOffsetOf3(minutes)) return "YYYX";
         if (this.hasAnOffsetOf4(minutes)) return "YYYY";
         
-        return "XXXX"; 
+
     }
 
     // 5-minute blocks line
@@ -36,7 +36,7 @@ export class BerlinClock {
 
     berlinClockSingleHour(hour){
 
-        if (hour === 0 || hour === 5) return "XXXX";
+        if (this.hasAnOffsetOf0hour(hour)) return "XXXX";
         if (this.hasAnOffsetOf1hour(hour)) return "RXXX";
         if (this.hasAnOffsetOf2hour(hour)) return "RRXX";
         if (this.hasAnOffsetOf3hour(hour)) return "RRRX";
@@ -94,6 +94,7 @@ export class BerlinClock {
     }
 
 
+    //Offsets of minutes
 
     hasAnOffsetOf0 (minutes){
         return minutes % 5 ===0;
@@ -113,6 +114,13 @@ export class BerlinClock {
 
     hasAnOffsetOf4(minutes) {
         return minutes % 5 === 4;
+    }
+
+
+    //Offsets of hours
+
+    hasAnOffsetOf0hour(hour) {
+        return hour % 5 === 0;
     }
 
     hasAnOffsetOf1hour(hour) {

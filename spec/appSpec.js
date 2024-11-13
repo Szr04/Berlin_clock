@@ -430,7 +430,7 @@ describe("BerlinClockSingleHour function should return the single hour line", fu
         expect(result).toBe("RXXX");
     })
 
-    it("should return RRXX when given 2 hour", function(){
+    it("should return RRXX when given 2 hours", function(){
         const date = new Date();
         date.setHours(2);
 
@@ -439,7 +439,7 @@ describe("BerlinClockSingleHour function should return the single hour line", fu
         expect(result).toBe("RRXX");
     })
 
-    it("should return RRRX when given 3 hour", function(){
+    it("should return RRRX when given 3 hours", function(){
         const date = new Date();
         date.setHours(3);
 
@@ -448,7 +448,7 @@ describe("BerlinClockSingleHour function should return the single hour line", fu
         expect(result).toBe("RRRX");
     })
 
-    it("should return RRRR when given 4 hour", function(){
+    it("should return RRRR when given 4 hours", function(){
         const date = new Date();
         date.setHours(4);
 
@@ -457,7 +457,7 @@ describe("BerlinClockSingleHour function should return the single hour line", fu
         expect(result).toBe("RRRR");
     })
 
-    it("should return XXXX when given 5 hour", function(){
+    it("should return XXXX when given 5 hours", function(){
         const date = new Date();
         date.setHours(5);
 
@@ -466,7 +466,7 @@ describe("BerlinClockSingleHour function should return the single hour line", fu
         expect(result).toBe("XXXX");
     })
 
-    it("should return RXXX when given 6 hour", function(){
+    it("should return RXXX when given 6 hours", function(){
         const date = new Date();
         date.setHours(6);
 
@@ -475,7 +475,7 @@ describe("BerlinClockSingleHour function should return the single hour line", fu
         expect(result).toBe("RXXX");
     })
 
-    it("should return RRXX when given 7 hour", function(){
+    it("should return RRXX when given 7 hours", function(){
         const date = new Date();
         date.setHours(7);
 
@@ -484,7 +484,7 @@ describe("BerlinClockSingleHour function should return the single hour line", fu
         expect(result).toBe("RRXX");
     })
 
-    it("should return RRRX when given 8 hour", function(){
+    it("should return RRRX when given 8 hours", function(){
         const date = new Date();
         date.setHours(8);
 
@@ -493,13 +493,22 @@ describe("BerlinClockSingleHour function should return the single hour line", fu
         expect(result).toBe("RRRX");
     })
 
-    it("should return RRRR when given 9 hour", function(){
+    it("should return RRRR when given 9 hours", function(){
         const date = new Date();
         date.setHours(9);
 
         const result = clock.berlinClockSingleHour(date.getHours());
 
         expect(result).toBe("RRRR");
+    })
+
+    it("should return XXXX when given 10 hours", function(){
+        const date = new Date();
+        date.setHours(10);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("XXXX");
     })
     
     
