@@ -47,7 +47,7 @@ export class BerlinClock {
 
     berlinClock5Hours(hour){
 
-        if (hour === 0) return "XXXX";
+        if (hour === 0 || hour === 1) return "XXXX";
     }
 
     

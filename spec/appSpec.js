@@ -533,11 +533,20 @@ describe("BerlinClockSingleHour function should return the single hour line", fu
 describe("berlinClock5Hours function should return the 5 hours", function() {
     const clock = new BerlinClock();
 
-    it("should return XXXX when given 0 hours", function(){
+    it("should return XXXX when given 0 hour", function(){
         const date = new Date();
         date.setHours(0);
 
-        const result = clock.berlinClockSingleHour(date.getHours());
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("XXXX");
+    })
+
+    it("should return XXXX when given 1 hour", function(){
+        const date = new Date();
+        date.setHours(1);
+
+        const result = clock.berlinClock5Hours(date.getHours());
 
         expect(result).toBe("XXXX");
     })
