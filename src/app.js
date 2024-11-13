@@ -12,7 +12,7 @@ export class BerlinClock {
         if (this.hasAnOffsetOf3(minutes)) return "YYYX";
         if (this.hasAnOffsetOf4(minutes)) return "YYYY";
         
-        return "XXXX"; 
+
     }
 
     // 5-minute blocks line
@@ -32,6 +32,33 @@ export class BerlinClock {
         if(this.isBetween55and59(minutes)) return "YYRYYRYYRYY";
     }
 
+    // Single hour line
+
+    berlinClockSingleHour(hour){
+
+        if (this.hasAnOffsetOf0hour(hour)) return "XXXX";
+        if (this.hasAnOffsetOf1hour(hour)) return "RXXX";
+        if (this.hasAnOffsetOf2hour(hour)) return "RRXX";
+        if (this.hasAnOffsetOf3hour(hour)) return "RRRX";
+        if (this.hasAnOffsetOf4hour(hour)) return "RRRR";
+    
+
+    }
+
+    berlinClock5Hours(hour){
+
+        if (this.isUnder5hours(hour)) return "XXXX";
+        if (this.isBetween5and9hour(hour)) return "RXXX";
+        if (this.isBetween10and14hour(hour)) return "RRXX";
+        if (this.isBetween15and19hour(hour)) return "RRRX";
+        if (this.isBetween20and23hour(hour)) return "RRRR";
+
+
+        
+        
+    }
+
+    
 
     isUnder5minutesOrIsEqualTo60(minutes){
         return minutes < 5 || minutes === 60;
@@ -80,6 +107,7 @@ export class BerlinClock {
     }
 
 
+    //Offsets of minutes
 
     hasAnOffsetOf0 (minutes){
         return minutes % 5 ===0;
@@ -100,5 +128,49 @@ export class BerlinClock {
     hasAnOffsetOf4(minutes) {
         return minutes % 5 === 4;
     }
+
+
+    //Offsets of hours
+
+    hasAnOffsetOf0hour(hour) {
+        return hour % 5 === 0;
+    }
+
+    hasAnOffsetOf1hour(hour) {
+        return hour % 5 === 1;
+    }
+
+    hasAnOffsetOf2hour(hour) {
+        return hour % 5 === 2;
+    }
+
+    hasAnOffsetOf3hour(hour) {
+        return hour % 5 === 3;
+    }
+
+    hasAnOffsetOf4hour(hour) {
+        return hour % 5 === 4;
+    }
+
+
+    isUnder5hours(hour){
+        return hour < 5;
+    }
+
+    isBetween5and9hour(hour){
+        return hour >= 5 && hour <= 9;
+    }
+
+    isBetween10and14hour(hour){
+        return hour >= 10 && hour <= 14;
+    }
+    isBetween15and19hour(hour) {
+        return hour >= 15 && hour <= 19;
+    }
+
+    isBetween20and23hour(hour) {
+        return hour >= 20 && hour <= 23;
+    }
+
 
 }

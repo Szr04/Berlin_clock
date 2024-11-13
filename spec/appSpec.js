@@ -407,18 +407,247 @@ describe("berlinClock5Minutes function should return the 5 minutes", function() 
         
         expect(result).toBe("XXXXXXXXXXX");   
       });
+})
 
+describe("BerlinClockSingleHour function should return the single hour line", function () {
+    const clock = new BerlinClock();
+    it("should return XXXX when given 0 hour", function(){
+        const date = new Date();
+        date.setHours(0);
 
+        const result = clock.berlinClockSingleHour(date.getHours());
 
+        expect(result).toBe("XXXX");
 
+    });
 
+    it("should return RXXX when given 1 hour", function(){
+        const date = new Date();
+        date.setHours(1);
 
+        const result = clock.berlinClockSingleHour(date.getHours());
 
+        expect(result).toBe("RXXX");
+    });
 
-    
-    
-    
+    it("should return RRXX when given 2 hours", function(){
+        const date = new Date();
+        date.setHours(2);
 
+        const result = clock.berlinClockSingleHour(date.getHours());
 
+        expect(result).toBe("RRXX");
+    });
+
+    it("should return RRRX when given 3 hours", function(){
+        const date = new Date();
+        date.setHours(3);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("RRRX");
+    });
+
+    it("should return RRRR when given 4 hours", function(){
+        const date = new Date();
+        date.setHours(4);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("RRRR");
+    });
+
+    it("should return XXXX when given 5 hours", function(){
+        const date = new Date();
+        date.setHours(5);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("XXXX");
+    });
+
+    it("should return RXXX when given 6 hours", function(){
+        const date = new Date();
+        date.setHours(6);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("RXXX");
+    });
+
+    it("should return RRXX when given 7 hours", function(){
+        const date = new Date();
+        date.setHours(7);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("RRXX");
+    });
+
+    it("should return RRRX when given 8 hours", function(){
+        const date = new Date();
+        date.setHours(8);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("RRRX");
+    });
+
+    it("should return RRRR when given 9 hours", function(){
+        const date = new Date();
+        date.setHours(9);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("RRRR");
+    });
+
+    it("should return XXXX when given 10 hours", function(){
+        const date = new Date();
+        date.setHours(10);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("XXXX");
+    });
+
+    it("should return RXXX when given 11 hours", function(){
+        const date = new Date();
+        date.setHours(11);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("RXXX");
+    });
+
+    it("should return RRRR when given 14 hours", function(){
+        const date = new Date();
+        date.setHours(14);
+
+        const result = clock.berlinClockSingleHour(date.getHours());
+
+        expect(result).toBe("RRRR");
+    });
 
 })
+describe("berlinClock5Hours function should return the 5 hours", function() {
+    const clock = new BerlinClock();
+
+    it("should return XXXX when given 0 hour", function(){
+        const date = new Date();
+        date.setHours(0);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("XXXX");
+    });
+
+    it("should return XXXX when given 1 hour", function(){
+        const date = new Date();
+        date.setHours(1);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("XXXX");
+    });
+
+    it("should return XXXX when given 2 hours", function(){
+        const date = new Date();
+        date.setHours(2);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("XXXX");
+    });
+
+    it("should return XXXX when given 3 hours", function(){
+        const date = new Date();
+        date.setHours(3);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("XXXX");
+    });
+
+    it("should return RXXX when given 5 hours", function(){
+        const date = new Date();
+        date.setHours(5);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("RXXX");
+    });
+
+    it("should return RXXX when given 9 hours", function(){
+        const date = new Date();
+        date.setHours(9);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("RXXX");
+    });
+
+    it("should return RRXX when given 10 hours", function(){
+        const date = new Date();
+        date.setHours(10);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("RRXX");
+    });
+
+    it("should return RRXX when given 14 hours", function(){
+        const date = new Date();
+        date.setHours(14);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("RRXX");
+    });
+
+    it("should return RRRX when given 15 hours", function(){
+        const date = new Date();
+        date.setHours(15);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("RRRX");
+    });
+
+    it("should return RRRX when given 19 hours", function(){
+        const date = new Date();
+        date.setHours(15);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("RRRX");
+    });
+
+    it("should return RRRR when given 20 hours", function(){
+        const date = new Date();
+        date.setHours(20);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("RRRR");
+    });
+
+    it("should return RRRR when given 23 hours", function(){
+        const date = new Date();
+        date.setHours(23);
+
+        const result = clock.berlinClock5Hours(date.getHours());
+
+        expect(result).toBe("RRRR");
+    });
+
+    
+    
+})
+    
+    
+    
+
+
+
+
