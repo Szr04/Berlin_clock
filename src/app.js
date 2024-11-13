@@ -39,6 +39,8 @@ export class BerlinClock {
         if (hour === 1) return "RXXX";
         if (hour === 2) return "RRXX";
         if (hour === 3) return "RRRX";
+        if (hour === 4) return "RRRR";
+
 
     }
 
