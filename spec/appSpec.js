@@ -664,13 +664,22 @@ describe("BerlinClockSeconds function should return the seconds line", function 
         expect(result).toBe("X");
     });
 
-    it("should return R when given 2 second", function(){
+    it("should return R when given 2 seconds", function(){
         const date = new Date();
         date.setSeconds(2);
 
         const result = clock.berlinClockSeconds(date.getSeconds());
 
         expect(result).toBe("R");
+    });
+
+    it("should return X when given 3 seconds", function(){
+        const date = new Date();
+        date.setSeconds(3);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("X");
     });
 })    
     
