@@ -51,7 +51,7 @@ export class BerlinClock {
         if (this.isBetween5and9hour(hour)) return "RXXX";
         if (this.isBetween10and14hour(hour)) return "RRXX";
         if (this.isBetween15and19hour(hour)) return "RRRX";
-        if (this.isBetween20and24hour(hour)) return "RRRR";
+        if (this.isBetween20and23hour(hour)) return "RRRR";
 
 
         
@@ -168,8 +168,8 @@ export class BerlinClock {
         return hour >= 15 && hour <= 19;
     }
 
-    isBetween20and24hour(hour) {
-        return hour >= 20 && hour <= 24;
+    isBetween20and23hour(hour) {
+        return hour >= 20 && hour <= 23;
     }
 
 
