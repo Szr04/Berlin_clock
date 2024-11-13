@@ -726,6 +726,15 @@ describe("BerlinClockSeconds function should return the seconds line", function 
 
         expect(result).toBe("R");
     });
+
+    it("should return X when given 9 seconds", function(){
+        const date = new Date();
+        date.setSeconds(9);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("X");
+    });
 })    
     
 
