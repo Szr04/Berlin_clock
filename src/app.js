@@ -35,12 +35,13 @@ export class BerlinClock {
     // Single hour line
 
     berlinClockSingleHour(hour){
-        if (hour === 0) return "XXXX";
+
+        if (hour === 0 || hour === 5) return "XXXX";
         if (hour === 1) return "RXXX";
         if (hour === 2) return "RRXX";
         if (hour === 3) return "RRRX";
         if (hour === 4) return "RRRR";
-
+    
 
     }
 
