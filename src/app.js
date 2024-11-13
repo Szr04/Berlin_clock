@@ -56,6 +56,11 @@ export class BerlinClock {
         if (this.isBetween20and23hour(hour)) return "RRRR";
     }
 
+
+    berlinClockSeconds(second){
+        if(second === 0) return "R";
+    }
+
     
 
     isUnder5minutesOrIsEqualTo60(minutes){

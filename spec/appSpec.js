@@ -640,12 +640,21 @@ describe("berlinClock5Hours function should return the 5 hours", function() {
 
         expect(result).toBe("RRRR");
     });
-
-    
-    
 })
     
-    
+
+describe("BerlinClockSeconds function should return the seconds line", function () {
+    const clock = new BerlinClock();
+
+    it("should return R when given 0 second", function(){
+        const date = new Date();
+        date.setSeconds(0);
+
+        const result = clock.berlinClockSeconds(date.getSeconds());
+
+        expect(result).toBe("R");
+    });
+})    
     
 
 
