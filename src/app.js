@@ -58,7 +58,7 @@ export class BerlinClock {
 
 
     berlinClockSeconds(second){
-        if(second === 0 || second === 2) return "R";
+        if(this.isSecondsPair(second)) return "R";
         if(second === 1 || second === 3) return "X";
         
     }
@@ -177,5 +177,11 @@ export class BerlinClock {
         return hour >= 20 && hour <= 23;
     }
 
+
+
+    //secondsPairs
+    isSecondsPair(second){
+        return second % 2 === 0;
+    }
 
 }
