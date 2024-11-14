@@ -57,6 +57,7 @@ export class BerlinClock {
     }
 
 
+    // Second block (top of the clock)
     berlinClockSeconds(second){
         if(this.isSecondsPair(second)) return "R";
         if(!this.isSecondsPair(second)) return "X";
@@ -64,6 +65,7 @@ export class BerlinClock {
     }
 
 
+    //The entire berlin clock !
     berlinClockFinal(hour,minutes,second){
         return this.berlinClockSeconds(second) + "-" + this.berlinClock5Hours(hour) + "-" + this.berlinClockSingleHour(hour) + "-" + this.berlinClock5Minutes(minutes) + "-" + this.berlinClockSingleMinute(minutes);
     }
