@@ -15,7 +15,7 @@ This project involves implementing a version of the **Berlin Clock** using JavaS
 ## **How the Berlin Clock Works**
 The Berlin Clock consists of five rows of lights that represent the seconds, hours, and minutes. Each row has its own function and display format:
 
-### **Seconds Lamp (Top of the clock)**
+### Seconds Lamp (Top of the clock)
 - 1 circular yellow lamp located at the top of the clock.
 The lamp is on for even seconds and off for odd seconds.
 
