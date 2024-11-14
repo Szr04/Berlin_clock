@@ -2,8 +2,8 @@
 
 ## **Team Members**
 
-- **Helalouch Aymane**:
-- **Sarii El Mouchik Nabil**:
+- **Helalouch Aymane**
+- **Sarii El Mouchik Nabil**
 - **Sezer Mesut**
 
 ## **Project Description**
