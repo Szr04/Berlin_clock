@@ -56,6 +56,7 @@ export class BerlinClock {
         if (this.isBetween20and23hour(hour)) return "RRRR";
     }
 
+    // second circle
 
     berlinClockSeconds(second){
         if(this.isSecondsPair(second)) return "R";
@@ -63,6 +64,7 @@ export class BerlinClock {
         
     }
 
+    //The entire berlin clock
 
     berlinClockFinal(hour,minutes,second){
         return this.berlinClockSeconds(second) + "-" + this.berlinClock5Hours(hour) + "-" + this.berlinClockSingleHour(hour) + "-" + this.berlinClock5Minutes(minutes) + "-" + this.berlinClockSingleMinute(minutes);
